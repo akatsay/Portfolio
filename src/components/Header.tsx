@@ -1,5 +1,5 @@
 import colors from '../constants/colors'
-import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
+import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from 'react-icons/ai'
 
 const Header = () => {
 
@@ -17,6 +17,7 @@ const Header = () => {
 
         <div
           data-testid='header-icons'
+          className='mt-3 mb-3'
         >
           <ul className='flex flex-row'>
             <a href='https://www.linkedin.com/in/alexandr-katsay-1779a721a/' rel="noreferrer" target='_blank' >
@@ -25,6 +26,9 @@ const Header = () => {
             <a href='https://github.com/akatsay' rel="noreferrer" target='_blank' >
               <AiFillGithub className='navbar-item m-3 text-3xl bold text-white' />
             </a>
+            <a href='https://www.instagram.com/_catsay_/' rel="noreferrer" target='_blank' >
+              <AiFillInstagram className='navbar-item m-3 text-3xl bold text-white' />
+            </a>
           </ul>
         </div>
 
@@ -32,9 +36,9 @@ const Header = () => {
           data-testid='header-links'
         >
           <ul className='flex flex-row h-full align-middle'>
-            <li onClick={() => scrollIntoView('intro')} className='navbar-item menu-item m-3 text-xl bold text-white'>About me</li>
-            <li className='navbar-item menu-item m-3 text-xl bold text-white'>My projects</li>
-            <li className='navbar-item menu-item m-3 mr-10 text-xl bold text-white'>Contact me</li>
+            <li onClick={() => scrollIntoView('intro')} className='my-auto navbar-item menu-item m-3 text-xl bold text-white'>About me</li>
+            <li onClick={() => scrollIntoView('projects')} className='my-auto navbar-item menu-item m-3 text-xl bold text-white'>My projects</li>
+            <li onClick={() => scrollIntoView('footer')} className='my-auto navbar-item menu-item m-3 mr-10 text-xl bold text-white'>Contact me</li>
           </ul>
         </div>
 

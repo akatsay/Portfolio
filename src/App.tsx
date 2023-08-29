@@ -1,6 +1,9 @@
 import './styles/App.css'
 import Header from './components/Header'
 import Intro from './components/Intro'
+import Footer from './components/Footer'
+import LiveProjectsList from './components/LiveProjectsList'
+import GitHubProjectsList from './components/GitHubProjectsList'
 
 function App() {
   return (
@@ -10,6 +13,10 @@ function App() {
     >
       <Header />
       <Intro />
+      <LiveProjectsList />
+      <GitHubProjectsList />
+      <div className='w-screen h-12 bg-white mb-12' />
+      <Footer />
     </div>
   )
 }
