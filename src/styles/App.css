@@ -82,3 +82,15 @@
     -webkit-transform: scale(1.0);
   }
 }
+
+/* Initial state: hidden to the left */
+.card {
+  transform: translateX(-100%); /* Slide element out of viewport */
+  transition: transform;
+}
+
+/* Animation: slide in from the left */
+.slide-in {
+  transform: translateX(0); /* Slide element in from the left */
+  transition: transform 0.8s ease; /* Apply transition to the transform property */
+}

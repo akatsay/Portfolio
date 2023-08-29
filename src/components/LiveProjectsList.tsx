@@ -1,6 +1,10 @@
 import colors from '../constants/colors'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const LiveProjectsList = () => {
+
+  useIntersectionObserver()
+
   return ( 
     <div 
       id='projects'
@@ -20,19 +24,19 @@ const LiveProjectsList = () => {
 
       <iframe
         src='https://loremcakery.org/'
-        className='h-screen rounded-xl'
+        className='card h-screen rounded-xl'
         loading='lazy'
       />
 
       <iframe
         src='https://congratsy.info/'
-        className='h-screen mt-32 rounded-xl'
+        className='card h-screen mt-32 rounded-xl'
         loading='lazy'
       />
 
       <iframe
         src='https://next-joke-generator.vercel.app/'
-        className='h-screen mt-32 rounded-xl'
+        className='card h-screen mt-32 rounded-xl'
         loading='lazy'
       />
 

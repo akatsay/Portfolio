@@ -10,11 +10,11 @@ interface IProps {
 
 const GitHubProject = ({url, title, description, imgSrc, alt} : IProps ) => {
   return ( 
-    <div style={{backgroundColor: colors.gray}} className='rounded-xl' >
+    <div style={{backgroundColor: colors.gray}} className='card rounded-xl' >
       <img 
         src={imgSrc} 
         alt={alt || 'Project preview'} 
-        className=' rounded-t-xl rounded-b-3xl'
+        className='rounded-t-xl rounded-b-3xl'
       />
       <div className='m-4'>
         <p className=' font-extrabold text-3xl mt-5'>{title}</p>

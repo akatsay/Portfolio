@@ -1,7 +1,11 @@
 import colors from '../constants/colors'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import GitHubProject from './GitHubProject'
 
 const GitHubProjectsList = () => {
+
+  useIntersectionObserver()
+
   return ( 
     <>
       <h2 className='mx-auto text-white bold text-4xl'>My other projects:</h2>
