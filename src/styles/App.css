@@ -1,0 +1,29 @@
+/* color change on hover navbar items */
+.navbar-item {
+  &:hover {
+    color: #C1292E;
+  }
+}
+
+/* underline animation for menu items */
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+  &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom right;
+      background-color: white;
+      transition: transform 0.35s ease-in-out;
+    }
+  &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+}
