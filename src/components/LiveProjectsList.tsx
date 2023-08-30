@@ -1,8 +1,13 @@
 import colors from '../constants/colors'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import useWindowDimensions from '../hooks/useWindowDimensions'
-import IFrame from './IFrame'
 import LiveProject from './LiveProject'
+
+interface IProject {
+  title: string
+  description: string
+  src: string
+}
 
 const LiveProjectsList = () => {
 
@@ -10,10 +15,13 @@ const LiveProjectsList = () => {
 
   useIntersectionObserver()
 
-  const projectURLs: string[] = [
-    'https://loremcakery.org/',
-    'https://congratsy.info/',
-    'https://next-joke-generator.vercel.app/'
+  const liveProjects: IProject[] = [
+    {title: 'Lorem Cakery', description: 'Landing page for Non-existing Cakery :)', src: 'https://loremcakery.org/'},
+    {title: 'Congratsy', description: 'Web application for searching greeting cards, my first react project.', src: 'https://congratsy.info/'},
+    {
+      title: 'Next Joke Generator',
+      description: 'My first application with Next.js embracing SSR features. (I\'ve also done it with React-Native and Expo previously)',
+      src: 'https://next-joke-generator.vercel.app/'},
   ]
 
   return ( 
@@ -34,12 +42,12 @@ const LiveProjectsList = () => {
       </div>
 
       {
-        projectURLs.map((item, i) => {
+        liveProjects.map((item, i) => {
           return (
             i === 0 ?
-              <LiveProject key={item} src={item} title={item} description={item} />
+              <LiveProject key={item.src} src={item.src} title={item.title} description={item.description} />
               :
-              <LiveProject key={item} src={item} className='mt-32' title={item} description={item} />
+              <LiveProject key={item.src} src={item.src} className='mt-32' title={item.title} description={item.description} />
           )
         })
       }

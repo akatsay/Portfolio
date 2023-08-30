@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Loader from './Loader'
 
 interface IProps {
   src: string
@@ -7,9 +8,7 @@ interface IProps {
 const IFrame = ({src} : IProps) => {
 
   const [isLoading, setIsLoading] = useState(true) // Loading state
-
-  console.log(isLoading)
-
+  
   return ( 
     <div className='relative'>
       <iframe
@@ -23,15 +22,7 @@ const IFrame = ({src} : IProps) => {
 
       {
         isLoading &&
-      <div
-        style={{height: '100%'}}
-        className="absolute inset-0 rounded-xl flex items-center justify-center bg-black opacity-90"
-      >
-        <div className='m-auto flex flex-col justify-center align-middle'>
-          <div className=" mx-auto lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-          <p className='navbar-item menu-item m-3 text-xl bold text-white'>Site is loading</p>
-        </div>
-      </div>
+        <Loader />
       }
     </div>
   )

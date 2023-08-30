@@ -16,9 +16,9 @@ const GitHubProject = ({url, title, description, imgSrc, alt} : IProps ) => {
         alt={alt || 'Project preview'} 
         className='rounded-t-xl rounded-b-3xl'
       />
-      <div className='m-4'>
+      <div className='p-4'>
         <p className=' font-extrabold text-3xl mt-5 break-words'>{title}</p>
-        <p className='font-medium text-2xl mt-2 ml-10 break-words'>{description}</p>
+        <p className='font-medium text-2xl mt-2 ml-5 break-words'>{description}</p>
         <a href={url} rel="noreferrer" target='_blank' >
           <p className='font-medium text-blue-700 text-2xl mt-2 break-words'>{'See source code </>'}</p>
         </a>

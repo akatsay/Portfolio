@@ -6,6 +6,7 @@ import LiveProjectsList from './components/LiveProjectsList'
 import GitHubProjectsList from './components/GitHubProjectsList'
 
 function App() {
+
   return (
     <div 
       data-testid="App" 

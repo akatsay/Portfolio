@@ -181,3 +181,146 @@
     transform: rotate(360deg);
   }
 }
+
+
+& .navbar, .dropdown {
+  display: block;
+  position: relative;
+  height: 48px;
+}
+& .dropdown-trigger {
+  cursor: pointer;
+  height: 100%;
+  transition: transform 0.2s ease-in-out 0.2s;
+  & * {
+      cursor: pointer;
+  }
+  & span {
+      display: block;
+      width: 45px;
+      height: 4px;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+      position: relative;
+      background: white;
+      border-radius: 3px;
+      z-index: 1;
+      &:last-of-type {
+          margin-bottom: 0;
+      }
+  }
+  & .line-1 {
+      transition: transform 0.2s ease-in-out;
+  }
+  & .line-2 {
+      transition: transform 0.2s ease-in-out;
+  }
+  & .line-3 {
+      transition: transform 0.2s ease-in-out;
+  }
+  &.active {
+      transform: rotate(45deg);
+      & .line-1 {
+          transform: translateY(14px);
+      }
+      & .line-2 {
+          transform: rotate(90deg);
+      }
+      & .line-3 {
+          transform: translateY(-14px);
+      }
+  }
+}
+
+/* Styles for .dropdown-menu */
+& .dropdown-menu {
+  position: absolute;
+  top: 65px;
+  right: -290px;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #313436;
+  box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styles for .dropdown-menu when it has the class .show */
+& .dropdown-menu.show {
+  transform: translateX(-255px);
+}
+
+/* Styles for .menu-item */
+& .dropdown-menu .menu-item {
+  margin: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+}
+
+.app-loader-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* styles for lazy images */
+.blurred-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+.blurred-img img {
+  opacity: 0;
+}
+
+.blurred-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  border-radius: 50%;
+  animation: pulse 2.5s infinite;
+  background-color: white;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blurred-img.loaded::before {
+  animation: none;
+  content: none;
+}
+
+.blurred-img img {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.blurred-img.loaded {
+  filter: none;
+}
+
+.blurred-img.loaded img {
+  opacity: 1;
+}
