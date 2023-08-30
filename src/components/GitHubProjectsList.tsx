@@ -7,7 +7,7 @@ const GitHubProjectsList = () => {
   
   const { width } = useWindowDimensions()
 
-  useIntersectionObserver()
+  useIntersectionObserver({target: '.card'})
 
   return ( 
     <>

@@ -13,7 +13,7 @@ const LiveProjectsList = () => {
 
   const { width } = useWindowDimensions()
 
-  useIntersectionObserver()
+  useIntersectionObserver({target: '.card'})
 
   const liveProjects: IProject[] = [
     {title: 'Lorem Cakery', description: 'Landing page for Non-existing Cakery :)', src: 'https://loremcakery.org/'},

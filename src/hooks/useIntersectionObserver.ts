@@ -1,9 +1,13 @@
 import {useEffect} from 'react'
 
-export const useIntersectionObserver = () => {
+interface IParams {
+  target: string
+}
+
+export const useIntersectionObserver = ({target} : IParams ) => {
   useEffect(() => {
     // Create the IntersectionObserver in the effect hook
-    const cards = document.querySelectorAll('.card')
+    const cards = document.querySelectorAll(target)
         
     const observer = new IntersectionObserver(
       entries => {
