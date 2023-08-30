@@ -11,7 +11,7 @@ const GitHubProjectsList = () => {
 
   return ( 
     <>
-      <h2 className='mx-auto text-white bold text-4xl'>My other projects:</h2>
+      <h2 className='mx-auto my-5 text-white bold text-4xl'>My other projects:</h2>
       <div 
         id='projects'
         className={`w-full align-middle ${width > 700 ? 'p-24' : width > 500 ? 'p-12' : 'p-6'}`} 
@@ -22,7 +22,7 @@ const GitHubProjectsList = () => {
           imgSrc='/assets/authPreview.jpg'
           url='https://github.com/akatsay/Authentication-base' 
           title='Authentication Base'
-          description='- Base for website authentication mechanism + account settings' 
+          description='This is a foundation layer for website authentication mechanism including account settings.' 
         />
 
       </div>

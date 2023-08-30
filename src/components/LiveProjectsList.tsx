@@ -2,6 +2,7 @@ import colors from '../constants/colors'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import IFrame from './IFrame'
+import LiveProject from './LiveProject'
 
 const LiveProjectsList = () => {
 
@@ -36,9 +37,9 @@ const LiveProjectsList = () => {
         projectURLs.map((item, i) => {
           return (
             i === 0 ?
-              <IFrame key={item} src={item} />
+              <LiveProject key={item} src={item} title={item} description={item} />
               :
-              <IFrame key={item} src={item} className='mt-32' />
+              <LiveProject key={item} src={item} className='mt-32' title={item} description={item} />
           )
         })
       }
