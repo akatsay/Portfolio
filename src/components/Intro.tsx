@@ -1,6 +1,6 @@
 import colors from '../constants/colors'
 import Image from './Image'
-
+//
 const Intro = () => {
   return ( 
     <div
