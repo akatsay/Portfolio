@@ -1,14 +1,24 @@
 import colors from '../constants/colors'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+import useWindowDimensions from '../hooks/useWindowDimensions'
+import IFrame from './IFrame'
 
 const LiveProjectsList = () => {
 
+  const { width } = useWindowDimensions()
+
   useIntersectionObserver()
+
+  const projectURLs: string[] = [
+    'https://loremcakery.org/',
+    'https://congratsy.info/',
+    'https://next-joke-generator.vercel.app/'
+  ]
 
   return ( 
     <div 
       id='projects'
-      className="w-full min-h-screen flex flex-col justify-between align-middle p-24" 
+      className={`w-full min-h-screen flex flex-col justify-between align-middle ${width > 700 ? 'p-24' : width > 500 ? 'p-12' : 'p-6'} `} 
       style={{backgroundColor: colors.blue}}
     >
 
@@ -22,23 +32,16 @@ const LiveProjectsList = () => {
         <h2 className='text-white bold text-4xl'>My live projects:</h2>
       </div>
 
-      <iframe
-        src='https://loremcakery.org/'
-        className='card h-screen rounded-xl'
-        loading='lazy'
-      />
-
-      <iframe
-        src='https://congratsy.info/'
-        className='card h-screen mt-32 rounded-xl'
-        loading='lazy'
-      />
-
-      <iframe
-        src='https://next-joke-generator.vercel.app/'
-        className='card h-screen mt-32 rounded-xl'
-        loading='lazy'
-      />
+      {
+        projectURLs.map((item, i) => {
+          return (
+            i === 0 ?
+              <IFrame key={item} src={item} />
+              :
+              <IFrame key={item} src={item} className='mt-32' />
+          )
+        })
+      }
 
     </div>
   )

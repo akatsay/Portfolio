@@ -1,7 +1,10 @@
 import colors from '../constants/colors'
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from 'react-icons/ai'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const Header = () => {
+
+  const {width} = useWindowDimensions()
 
   const scrollIntoView = (id: string) => {
     const targetSection = document.getElementById(id)
@@ -31,16 +34,18 @@ const Header = () => {
             </a>
           </ul>
         </div>
-
-        <div
-          data-testid='header-links'
-        >
-          <ul className='flex flex-row h-full align-middle'>
-            <li onClick={() => scrollIntoView('intro')} className='my-auto navbar-item menu-item m-3 text-xl bold text-white'>About me</li>
-            <li onClick={() => scrollIntoView('projects')} className='my-auto navbar-item menu-item m-3 text-xl bold text-white'>My projects</li>
-            <li onClick={() => scrollIntoView('footer')} className='my-auto navbar-item menu-item m-3 mr-10 text-xl bold text-white'>Contact me</li>
-          </ul>
-        </div>
+        {
+          width > 700 &&
+          <div
+            data-testid='header-links'
+          >
+            <ul className='flex flex-row h-full align-middle'>
+              <li onClick={() => scrollIntoView('intro')} className='my-auto navbar-item menu-item m-3 text-xl bold text-white'>About me</li>
+              <li onClick={() => scrollIntoView('projects')} className='my-auto navbar-item menu-item m-3 text-xl bold text-white'>My projects</li>
+              <li onClick={() => scrollIntoView('footer')} className='my-auto navbar-item menu-item m-3 mr-10 text-xl bold text-white'>Contact me</li>
+            </ul>
+          </div>
+        }
 
       </nav>
     </header>

@@ -1,8 +1,11 @@
 import colors from '../constants/colors'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 import GitHubProject from './GitHubProject'
 
 const GitHubProjectsList = () => {
+  
+  const { width } = useWindowDimensions()
 
   useIntersectionObserver()
 
@@ -11,7 +14,7 @@ const GitHubProjectsList = () => {
       <h2 className='mx-auto text-white bold text-4xl'>My other projects:</h2>
       <div 
         id='projects'
-        className="w-full min-h-screen flex flex-col justify-between align-middle p-24" 
+        className={`w-full align-middle ${width > 700 ? 'p-24' : width > 500 ? 'p-12' : 'p-6'}`} 
         style={{backgroundColor: colors.blue}}
       >
         

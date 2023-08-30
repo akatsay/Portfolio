@@ -1,12 +1,16 @@
 import colors from '../constants/colors'
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from 'react-icons/ai'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const Footer = () => {
+
+  const { width } = useWindowDimensions()
+
   return ( 
     <footer 
       id='footer'
       style={{backgroundColor: colors.red}} 
-      className='w-full flex justify-between align-middle'
+      className={`w-full flex justify-between align-middle ${width < 550 && 'flex-col'}`}
     >
       <div className="flex flex-col m-5">
         <p className="text-2xl bold text-white">Contact me:</p>
