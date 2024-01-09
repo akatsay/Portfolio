@@ -3,10 +3,18 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import LiveProject from './LiveProject'
 
+interface ICategory {
+  category: string
+  bulletPoints: string[]
+}
+export interface IFullDescription {
+  fullDescription: ICategory[]
+}
 interface IProject {
   title: string
   description: string
   src: string
+  fullDescription?: IFullDescription
 }
 
 const LiveProjectsList = () => {
@@ -16,12 +24,76 @@ const LiveProjectsList = () => {
   useIntersectionObserver({target: '.card'})
 
   const liveProjects: IProject[] = [
-    {title: 'Lorem Cakery', description: 'Landing page for Non-existing Cakery :)', src: 'https://loremcakery.org/'},
-    {title: 'Congratsy', description: 'Web application for searching greeting cards, my first react project.', src: 'https://congratsy.info/'},
+    {
+      title: 'Lorem Cakery',
+      description: 'Landing page for Non-existing Cakery :)',
+      src: 'https://loremcakery.org/',
+      fullDescription: {fullDescription: [
+          {
+            category: "Features",
+            bulletPoints: [
+              "Contact form after submitting which an email is sent to email of the owner and data is saved\n" +
+              "to database",
+              "Review cards",
+              " Admin routes, that enable authorized admin user to add, edit and delete items in the gallery\n" +
+              "page"
+            ]
+          },
+          {
+            category: "Technology and tools used",
+            bulletPoints: [
+              "REST API based on express.js",
+              "node mailer",
+              "express-validator",
+              "JWT token and Bearer authentication.",
+              "MongoDB",
+              "Cloudinary API for storing images for product items in the gallery",
+              "React",
+              "React Context API",
+              "YUP for forms validation",
+              "SCSS",
+            ]
+          }
+        ]}
+    },
+    {
+      title: 'Congratsy',
+      description: 'Web application for searching greeting cards.',
+      src: 'https://congratsy.info/',
+      fullDescription: {fullDescription: [
+          {
+            category: "Technology and tools used",
+            bulletPoints: [
+              "google-image-search library",
+              "Express.js",
+              "React",
+              "i18Next npm package for multilingualism"
+            ]
+          }
+        ]}
+    },
     {
       title: 'Next Joke Generator',
-      description: 'My first application with Next.js embracing SSR features. (I\'ve also done it with React-Native and Expo previously)',
-      src: 'https://next-joke-generator.vercel.app/'},
+      description: 'My first application with Next.js embracing SSR features.',
+      src: 'https://next-joke-generator.vercel.app/',
+      fullDescription: {fullDescription: [
+          {
+            category: "Features",
+            bulletPoints: [
+              "Displays a list of 10 random jokes",
+              "Generates an image visualising the joke"
+            ]
+          },
+          {
+            category: "Technology and tools used",
+            bulletPoints: [
+              "Next.js",
+              "OpenAI API",
+              "SSR"
+            ]
+          }
+        ]}
+    }
   ]
 
   return ( 
@@ -45,9 +117,9 @@ const LiveProjectsList = () => {
         liveProjects.map((item, i) => {
           return (
             i === 0 ?
-              <LiveProject key={item.src} src={item.src} title={item.title} description={item.description} />
+              <LiveProject key={item.src} src={item.src} title={item.title} description={item.description} fullDescription={item.fullDescription} />
               :
-              <LiveProject key={item.src} src={item.src} className='mt-32' title={item.title} description={item.description} />
+              <LiveProject key={item.src} src={item.src} className='mt-32' title={item.title} description={item.description} fullDescription={item.fullDescription}/>
           )
         })
       }

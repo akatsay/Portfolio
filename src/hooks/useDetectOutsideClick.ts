@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 /**
  * Hook for handling closing when clicking outside of a ref
