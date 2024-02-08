@@ -57,6 +57,35 @@ const LiveProjectsList = () => {
         ]}
     },
     {
+      title: 'TicTacToe Multiplayer',
+      description: 'Multiplayer game to play with friends :)',
+      src: 'https://tic-tac-toe-multiplayer-two.vercel.app/',
+      fullDescription: {fullDescription: [
+          {
+            category: "Features",
+            bulletPoints: [
+              "JWT token and Bearer authentication mechanism.",
+              "User settings to change account info / delete account",
+              "Real time Web-Socket communication between clients with chat",
+            ]
+          },
+          {
+            category: "Technology and tools used",
+            bulletPoints: [
+              "REST API based on Nest.js",
+              "Web sockets - Socket.io",
+              "JWT token.",
+              "MySQL",
+              "TypeORM",
+              "React",
+              "Redux",
+              "Webpack",
+              "SCSS",
+            ]
+          }
+        ]}
+    },
+    {
       title: 'Congratsy',
       description: 'Web application for searching greeting cards.',
       src: 'https://congratsy.info/',
