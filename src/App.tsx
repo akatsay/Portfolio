@@ -15,7 +15,7 @@ function App() {
       <Header />
       <Intro />
       <LiveProjectsList />
-      <GitHubProjectsList />
+      {/*<GitHubProjectsList />*/}
       <div className='w-screen h-12 bg-white mb-12' />
       <Footer />
     </div>

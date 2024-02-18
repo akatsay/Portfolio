@@ -64,7 +64,7 @@ const LiveProjectsList = () => {
           {
             category: "Features",
             bulletPoints: [
-              "JWT token and Bearer authentication mechanism.",
+              "JWT token and Bearer authentication mechanism",
               "User settings to change account info / delete account",
               "Real time Web-Socket communication between clients with chat",
             ]
@@ -80,6 +80,7 @@ const LiveProjectsList = () => {
               "React",
               "Redux",
               "Webpack",
+              "Babel",
               "SCSS",
             ]
           }
