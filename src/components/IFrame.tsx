@@ -3,9 +3,10 @@ import Loader from './Loader'
 
 interface IProps {
   src: string
+  height?: string
 }
 
-const IFrame = ({src} : IProps) => {
+const IFrame = ({src, height = "80vh"} : IProps) => {
 
   const [isLoading, setIsLoading] = useState(true) // Loading state
   
@@ -13,11 +14,12 @@ const IFrame = ({src} : IProps) => {
     <div className='relative'>
       <iframe
         src={src}
-        style={{height: '80vh'}}
+        style={{height: `${height}`}}
         className={'rounded-xl w-full'}
         loading='lazy'
         onLoad={() => {setIsLoading(false)}}
         onError={() => {setIsLoading(false)}}
+        width="800" height="600"
       />
 
       {

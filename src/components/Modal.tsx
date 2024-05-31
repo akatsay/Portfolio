@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction} from "react";
 import {IFullDescription} from "./LiveProjectsList";
+import {FaExternalLinkAlt} from "react-icons/fa";
 
 interface IProps {
   openModal: boolean;
@@ -36,8 +37,9 @@ export const Modal = ({ openModal, onModalClose, title, description, fullDescrip
               </React.Fragment>
             ))}
           </div>
-          <a href={src} rel="noreferrer" target='_blank'>
-            <p className='text-center font-medium text-blue-700 text-2xl mb-2 break-words'>Go to website</p>
+          <a href={src} rel="noreferrer" target='_blank' className= "flex flex-row justify-center text-2xl break-words">
+            <p className='font-medium text-blue-700 text-2xl mb-2'>Go to website</p>
+            <FaExternalLinkAlt className="ml-2 text-blue-700" />
           </a>
         </div>
       </div>

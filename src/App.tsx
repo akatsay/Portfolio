@@ -3,7 +3,8 @@ import Header from './components/Header'
 import Intro from './components/Intro'
 import Footer from './components/Footer'
 import LiveProjectsList from './components/LiveProjectsList'
-import GitHubProjectsList from './components/GitHubProjectsList'
+// import GitHubProjectsList from './components/GitHubProjectsList'
+import {Resume} from "./components/Resume";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     >
       <Header />
       <Intro />
+      <Resume />
       <LiveProjectsList />
       {/*<GitHubProjectsList />*/}
       <div className='w-screen h-12 bg-white mb-12' />
