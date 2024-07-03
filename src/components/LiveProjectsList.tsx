@@ -59,7 +59,7 @@ const LiveProjectsList = () => {
     {
       title: 'TicTacToe Multiplayer',
       description: 'Multiplayer game to play with friends :)',
-      src: 'https://tic-tac-toe-multiplayer-two.vercel.app/',
+      src: 'https://tictactoebysasha.online',
       fullDescription: {fullDescription: [
           {
             category: "Features",
