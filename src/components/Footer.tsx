@@ -14,8 +14,7 @@ const Footer = () => {
     >
       <div className="flex flex-col m-5">
         <p className="text-2xl bold text-white">Contact me:</p>
-        <a href="tel:228-148-8888" data-type="phone" className="menu-item ml-5 m-2 text-xl bold text-white">+1-646-867-5682</a>
-        <a href="mailto:info@loremIpsumCakery.org" data-type="email" className="menu-item ml-5 m-2 text-xl bold text-white">katsay.alexandr@gmail.com</a>
+        <a href="mailto:katsay.alexandr@gmail.com" data-type="email" className="menu-item ml-5 m-2 text-xl bold text-white">katsay.alexandr@gmail.com</a>
       </div>
       <div className="flex flex-col m-5">        
         <p className="text-2xl bold text-white">Follow me:</p>
@@ -25,9 +24,6 @@ const Footer = () => {
           </a>
           <a href='https://github.com/akatsay' rel="noreferrer" target='_blank' >
             <AiFillGithub className='follow-me-item m-3 text-5xl bold text-white' />
-          </a>
-          <a href='https://www.instagram.com/_catsay_/' rel="noreferrer" target='_blank' >
-            <AiFillInstagram className='follow-me-item m-3 text-5xl bold text-white' />
           </a>
         </div>
       </div>

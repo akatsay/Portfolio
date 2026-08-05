@@ -29,100 +29,70 @@ const LiveProjectsList = () => {
       description: 'Landing page for Non-existing Cakery :)',
       src: 'https://loremcakery.org/',
       fullDescription: {fullDescription: [
-          {
-            category: "Features",
-            bulletPoints: [
-              "Contact form after submitting which an email is sent to email of the owner and data is saved\n" +
-              "to database",
-              "Review cards",
-              " Admin routes, that enable authorized admin user to add, edit and delete items in the gallery\n" +
-              "page"
-            ]
-          },
-          {
-            category: "Technology and tools used",
-            bulletPoints: [
-              "REST API based on express.js",
-              "node mailer",
-              "express-validator",
-              "JWT token and Bearer authentication.",
-              "MongoDB",
-              "Cloudinary API for storing images for product items in the gallery",
-              "React",
-              "React Context API",
-              "YUP for forms validation",
-              "SCSS",
-            ]
-          }
-        ]}
-    },
-    {
-      title: 'TicTacToe Multiplayer',
-      description: 'Multiplayer game to play with friends :)',
-      src: 'https://tictactoebysasha.online',
-      fullDescription: {fullDescription: [
-          {
-            category: "Features",
-            bulletPoints: [
-              "JWT token and Bearer authentication mechanism",
-              "User settings to change account info / delete account",
-              "Real time Web-Socket communication between clients with chat",
-            ]
-          },
-          {
-            category: "Technology and tools used",
-            bulletPoints: [
-              "REST API based on Nest.js",
-              "Web sockets - Socket.io",
-              "JWT token.",
-              "MySQL",
-              "TypeORM",
-              "React",
-              "Redux",
-              "Webpack",
-              "Babel",
-              "SCSS",
-            ]
-          }
-        ]}
+        {
+          category: 'Features',
+          bulletPoints: [
+            'Contact form after submitting which an email is sent to email of the owner and data is saved\n' +
+              'to database',
+            'Review cards',
+            ' Admin routes, that enable authorized admin user to add, edit and delete items in the gallery\n' +
+              'page'
+          ]
+        },
+        {
+          category: 'Technology and tools used',
+          bulletPoints: [
+            'REST API based on express.js',
+            'node mailer',
+            'express-validator',
+            'JWT token and Bearer authentication.',
+            'MongoDB',
+            'Cloudinary API for storing images for product items in the gallery',
+            'React',
+            'React Context API',
+            'YUP for forms validation',
+            'SCSS',
+          ]
+        }
+      ]}
     },
     {
       title: 'Congratsy',
       description: 'Web application for searching greeting cards.',
       src: 'https://congratsy.info/',
       fullDescription: {fullDescription: [
-          {
-            category: "Technology and tools used",
-            bulletPoints: [
-              "google-image-search library",
-              "Express.js",
-              "React",
-              "i18Next npm package for multilingualism"
-            ]
-          }
-        ]}
+        {
+          category: 'Technology and tools used',
+          bulletPoints: [
+            'google-image-search library',
+            'Express.js',
+            'React',
+            'i18Next npm package for multilingualism'
+          ]
+        }
+      ]}
     },
     {
       title: 'Next Joke Generator',
       description: 'My first application with Next.js embracing SSR features.',
       src: 'https://next-joke-generator.vercel.app/',
       fullDescription: {fullDescription: [
-          {
-            category: "Features",
-            bulletPoints: [
-              "Displays a list of 10 random jokes",
-              "Generates an image visualising the joke"
-            ]
-          },
-          {
-            category: "Technology and tools used",
-            bulletPoints: [
-              "Next.js",
-              "OpenAI API",
-              "SSR"
-            ]
-          }
-        ]}
+        {
+          category: 'Features',
+          bulletPoints: [
+            'Displays a list of 10 random jokes',
+            'Generates an image visualising the joke'
+          ]
+        },
+        {
+          category: 'Technology and tools used',
+          bulletPoints: [
+            'Next.js',
+            'OpenAI API',
+            'SSR'
+          ]
+        }
+      ]}
     }
   ]
 
